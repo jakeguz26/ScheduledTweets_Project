@@ -7,8 +7,8 @@ class RegistrationsController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       redirect_to root_path, notice: "Successfully created account"
-    else
-      render :new
+      else
+        render :new
     end
   end
 
